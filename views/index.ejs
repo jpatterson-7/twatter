@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="30">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐦 Twatter</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&family=Russo+One&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="main">
+        <div class="content">
+            <span id="tweet"><%= locals.tweet || locals.error %></span>
+            <span id="author"><a target="_blank" href="https://twitter.com/twitter/status/<%= locals.tweetId %>"><%= locals.author || 'unknown author' %></a></span>
+        </div>
+    </div>
+    
+</body>
+</html>

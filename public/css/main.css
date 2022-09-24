@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    color: green;
+}
+
+.main {
+    width: 70vw;
+    height: 80vh;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    margin: 10% auto;
+    vertical-align: middle;
+    font-size: 1vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+#tweet {
+    text-align: center;
+    width: 100%;
+    font-family: 'Russo One', sans-serif;
+    font-size: 3vw;
+    color: #444
+}
+#author {
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+    margin-top: 2em;
+    
+}
+
+#author > a {
+    text-decoration: none; 
+    color: #777
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+    
+    .main {
+        margin: 30% auto;
+    }
+    
+    #tweet {
+        font-size: 3vh;
+    }
+    
+}
+
