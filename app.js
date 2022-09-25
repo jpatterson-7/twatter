@@ -18,18 +18,13 @@ app.get("/", async function (req, res) {
 
     async function main() {
         var tweetDetails = await getDetails()
-
         if (tweetDetails.author_id === 'unknown') {
             tweetDetails.author = 'Unknown'
         } else {
             tweetDetails.author = await getUser(tweetDetails.author_id)
-        }
-        
+        }   
         res.render('index', await tweetDetails)
     }
-
-    
-
 })
 
 
@@ -45,8 +40,9 @@ async function getDetails() {
             (response) => {
 
                 var result = response.data;
-                var randomNumber = Math.floor(Math.random() * 100);
+                var randomNumber = Math.floor(Math.random() * result.data.length);
                 var randomTweetData = result.data[randomNumber]
+                
                 if (typeof randomTweetData !== "undefined") {
                     if (randomTweetData.author_id) {
                         var userId = randomTweetData.author_id
@@ -57,7 +53,6 @@ async function getDetails() {
                 } else {
                     var data = {tweet: 'N/A', author_id: "unknown", tweetId:"N/A"}
                 }
-                
                 resolve(data);
             },
                 (error) => {
