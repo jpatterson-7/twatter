@@ -27,15 +27,15 @@ p {
 #tweet {
     text-align: center;
     width: 100%;
-    font-family: 'Russo One', sans-serif;
+    font-family: 'Patua One', sans-serif;
     font-size: 3vw;
     color: #444
 }
 #author {
     width: 100%;
     text-align: center;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 30px;
+    font-family: 'Syne Mono', sans-serif;
+    font-size: 1.3em;
     margin-top: 2em;
     
 }
@@ -43,6 +43,14 @@ p {
 #author > a {
     text-decoration: none; 
     color: #777
+}
+
+#author > a:hover {
+    color: rgb(50, 180, 224)
+}
+
+.keyword {
+    color: rgb(50, 180, 224);
 }
 
 @media only screen and (max-width: 768px) {

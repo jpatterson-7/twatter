@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&family=Russo+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&family=Russo+One&display=swap&family=Patua+One&family=Syne+Mono&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <div class="main">
@@ -18,6 +18,22 @@
             <span id="author"><a target="_blank" href="https://twitter.com/twitter/status/<%= locals.tweetId %>"><%= locals.author || 'unknown author' %></a></span>
         </div>
     </div>
+
+    <script>
+        var search_term = `<%= locals.search %>`
+        var tweet = document.getElementById('tweet').textContent
+        console.log(the_list)
+        var the_list = search_term.split(' ')
+
+        for (let elem in the_list) {
+            var searchMask = the_list[elem]
+            var regEx = new RegExp(searchMask, 'gi')
+            var replaceMask = `<span class="keyword">${the_list[elem]}</span>`
+            tweet = tweet.replace(regEx, replaceMask)
+
+        document.getElementById('tweet').innerHTML = tweet
+        }
+    </script>
     
 </body>
 </html>

@@ -49,7 +49,11 @@ async function getDetails() {
                     } else {
                     userId = "unknown"
                 } 
-                var data = {tweet: randomTweetData.text, author_id: userId, tweetId:randomTweetData.id}
+
+                
+
+
+                var data = {tweet: randomTweetData.text, author_id: userId, tweetId:randomTweetData.id, search:process.env.QUERY}
                 } else {
                     var data = {tweet: 'N/A', author_id: "unknown", tweetId:"N/A"}
                 }
